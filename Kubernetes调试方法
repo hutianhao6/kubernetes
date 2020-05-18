@@ -1,0 +1,13 @@
+Pod
+查看POD的状态
+命令：kubectl get pod -n openstack -l application=keystone
+查看POD的详细信息和事件
+命令：kubectl describe pod -n openstack {PODNAME}
+查看POD的打印日志
+命令：kubectl logs -it -n openstack {PODNAME}
+进入POD的容器内
+命令：kubectl exec -it -n openstack {PODNAME} bash
+用root用户进入容器
+命令：
+docker ps -a | grep {PODNAME}
+docker exec -it -u root {容器ID} bash
